@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<center>
+    <canvas id="myCanvas" width="1368px" height="768px" style="border:1px solid #d3d3d3;"></canvas>
+</center>
+
+</body>
+</html>
+<script>
+    let Rectangle = function (length, width) {
+        this.length = length;
+        this.width = width;
+
+        this.getLength = function () {
+            return length;
+        }
+        this.getWidth = function () {
+            return width;
+        }
+
+        this.getArea = function () {
+            return length * width;
+        }
+
+        this.getPerimeter = function () {
+            return (2 * length + 2 * width);
+        }
+
+        this.draw = function (x,y) {
+            let ctx = document.getElementById("myCanvas").getContext('2d');
+            ctx.beginPath();
+            ctx.strokeRect(x,y,length,width);
+        }
+    }
+
+    let rec1 = new Rectangle(200, 100);
+    let rec2 = new Rectangle(400, 200);
+    rec1.draw(10,10);
+    alert(rec1.getLength())
+    rec2.draw(100,100);
+    console.log(rec1.draw())
+
+</script>

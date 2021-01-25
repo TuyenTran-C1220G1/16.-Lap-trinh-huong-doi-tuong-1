@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let Temperature = function (c) {
+        this.C = c;
+        this.toF = function () {
+            return c + 32;
+        }
+        this.toKeVin = function () {
+            return c + 273.15;
+        }
+    }
+
+    let t = new Temperature(35);
+    alert(t.toF());
+    alert(t.toKeVin());
+    alert(t.C);
+</script>
